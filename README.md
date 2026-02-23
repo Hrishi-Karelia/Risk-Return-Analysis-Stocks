@@ -85,7 +85,7 @@ Reason: Volatility represents total risk and price fluctuations of the stock.
 
 A scatter plot was created to compare annual returns and annual volatility of each stock.
 
-(Insert risk-return graph here)
+<img width="913" height="547" alt="810f3383-1091-4651-9425-721aa61a8d15" src="https://github.com/user-attachments/assets/b34826e2-043f-4e9d-8d5d-0a3ffa7becc5" />
 
 Reason: This helps visualize the relationship between risk and return.
 
@@ -111,7 +111,7 @@ Sharpe Ratio was computed
 
 The Efficient Frontier was plotted.
 
-(Insert efficient frontier graph here)
+<img width="813" height="547" alt="4a38c92f-7381-4f01-841a-231884340f91" src="https://github.com/user-attachments/assets/3cfb55a5-b954-48cc-be8f-ffe1aed47803" />
 
 Reason: The Efficient Frontier identifies optimal portfolios that offer maximum return for a given level of risk.
 
@@ -119,7 +119,6 @@ Reason: The Efficient Frontier identifies optimal portfolios that offer maximum 
 
 The portfolio with the highest Sharpe Ratio was identified.
 
-(Insert maximum Sharpe Ratio portfolio graph here)
 
 Reason: This portfolio provides the best risk-adjusted performance.
 
@@ -136,8 +135,6 @@ CAPM formula used:
 Expected Return = Risk-Free Rate + Beta × (Market Return − Risk-Free Rate)
 
 Actual returns were compared with CAPM expected returns.
-
-(Insert CAPM comparison graph here)
 
 Reason: To determine whether stocks are overperforming or underperforming relative to market expectations.
 
@@ -169,7 +166,8 @@ The Maximum Sharpe Ratio portfolio provided the best risk-adjusted performance.
 
 Some stocks outperformed their CAPM expected return.
 
-Portfolio optimization significantly improved return per unit of risk.
+Portfolio optimization significantly improved return per unit of risk.![Uploading 810f3383-1091-4651-9425-721aa61a8d15.png…]()
+
 
 Conclusion
 
