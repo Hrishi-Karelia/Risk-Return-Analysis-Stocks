@@ -166,7 +166,7 @@ The Maximum Sharpe Ratio portfolio provided the best risk-adjusted performance.
 
 Some stocks outperformed their CAPM expected return.
 
-Portfolio optimization significantly improved return per unit of risk.![Uploading 810f3383-1091-4651-9425-721aa61a8d15.png…]()
+Portfolio optimization significantly improved return per unit of risk.
 
 
 Conclusion
