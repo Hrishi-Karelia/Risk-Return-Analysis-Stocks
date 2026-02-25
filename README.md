@@ -146,10 +146,9 @@ num_portfolios = 10000
 
 ---
 
-## Results & Insights
-## 📊 Results & Insights (Data-Backed)
+##  Results & Insights (Data-Backed)
 
-### 1️⃣ Risk–Return Analysis (2020–2025)
+### 1️ Risk–Return Analysis (2020–2025)
 
 Annual Returns:
 
@@ -167,13 +166,13 @@ Annual Volatility (Risk):
 - RELIANCE: 29.73%
 - TCS: 24.47% (Lowest Risk)
 
-📌 Observation:
+Observation:
 INFY delivered the highest return (25.46%) without having the highest risk, showing strong performance efficiency.
 ICICIBANK had the highest volatility (31.74%), confirming higher return comes with higher risk.
 
 ---
 
-### 2️⃣ Sharpe Ratio (Risk-Adjusted Performance)
+### 2️ Sharpe Ratio (Risk-Adjusted Performance)
 
 Risk-Free Rate Used: 7%
 
@@ -185,7 +184,7 @@ Sharpe Ratios:
 - RELIANCE: 0.313
 - HDFCBANK: 0.155 (Lowest)
 
-📌 Interpretation:
+Interpretation:
 INFY generated the highest return per unit of risk.
 HDFCBANK had the weakest risk-adjusted performance.
 
@@ -193,7 +192,7 @@ This proves that higher return alone is not enough — risk-adjusted return matt
 
 ---
 
-### 3️⃣ Beta (Market Sensitivity)
+### 3️ Beta (Market Sensitivity)
 
 - ICICIBANK: 1.29 (Highly sensitive to market)
 - RELIANCE: 1.11
@@ -201,13 +200,13 @@ This proves that higher return alone is not enough — risk-adjusted return matt
 - INFY: 0.89
 - TCS: 0.75 (Defensive stock)
 
-📌 Interpretation:
+ Interpretation:
 ICICIBANK is more volatile than the market (Beta > 1).
 TCS is less sensitive to market movements (Beta < 1).
 
 ---
 
-### 4️⃣ Diversification & Efficient Frontier
+### 4️ Diversification & Efficient Frontier
 
 10,000 random portfolios were simulated.
 
@@ -221,12 +220,12 @@ Comparison:
 Highest Individual Return: 25.46% (INFY)  
 Highest Individual Risk: 31.74% (ICICIBANK)
 
-📌 Key Insight:
+Key Insight:
 Portfolio volatility (23.85%) is significantly lower than the riskiest individual stock (31.74%), proving diversification reduces risk.
 
 ---
 
-### 5️⃣ Value at Risk (95% Confidence)
+### 5️ Value at Risk (95% Confidence)
 
 Worst Expected Daily Loss (5% worst cases):
 
@@ -236,13 +235,13 @@ Worst Expected Daily Loss (5% worst cases):
 - RELIANCE: -2.41%
 - TCS: -2.15% (Lowest downside risk)
 
-📌 Interpretation:
+Interpretation:
 TCS shows the lowest potential extreme daily loss.
 ICICIBANK carries the highest tail risk.
 
 ---
 
-## 🎯 Final Conclusion (From Data)
+##  Final Conclusion (From Data)
 
 - Risk and return are positively correlated.
 - INFY provides the best risk-adjusted return (Sharpe = 0.663).
