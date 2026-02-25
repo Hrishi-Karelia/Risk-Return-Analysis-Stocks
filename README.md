@@ -147,12 +147,110 @@ num_portfolios = 10000
 ---
 
 ## Results & Insights
+## 📊 Results & Insights (Data-Backed)
 
-- Higher return stocks generally exhibited higher volatility.
-- Diversification reduced overall portfolio risk.
-- The Maximum Sharpe Ratio portfolio provided the best risk-adjusted performance.
-- Some stocks outperformed their CAPM-expected return.
-- Portfolio optimization significantly improved return per unit of risk.
+### 1️⃣ Risk–Return Analysis (2020–2025)
+
+Annual Returns:
+
+- HDFCBANK: 11.21%
+- ICICIBANK: 23.33%
+- INFY: 25.46%
+- RELIANCE: 16.30%
+- TCS: 17.94%
+
+Annual Volatility (Risk):
+
+- HDFCBANK: 27.26%
+- ICICIBANK: 31.74% (Highest Risk)
+- INFY: 27.86%
+- RELIANCE: 29.73%
+- TCS: 24.47% (Lowest Risk)
+
+📌 Observation:
+INFY delivered the highest return (25.46%) without having the highest risk, showing strong performance efficiency.
+ICICIBANK had the highest volatility (31.74%), confirming higher return comes with higher risk.
+
+---
+
+### 2️⃣ Sharpe Ratio (Risk-Adjusted Performance)
+
+Risk-Free Rate Used: 7%
+
+Sharpe Ratios:
+
+- INFY: 0.663 (Highest)
+- ICICIBANK: 0.515
+- TCS: 0.447
+- RELIANCE: 0.313
+- HDFCBANK: 0.155 (Lowest)
+
+📌 Interpretation:
+INFY generated the highest return per unit of risk.
+HDFCBANK had the weakest risk-adjusted performance.
+
+This proves that higher return alone is not enough — risk-adjusted return matters.
+
+---
+
+### 3️⃣ Beta (Market Sensitivity)
+
+- ICICIBANK: 1.29 (Highly sensitive to market)
+- RELIANCE: 1.11
+- HDFCBANK: 1.08
+- INFY: 0.89
+- TCS: 0.75 (Defensive stock)
+
+📌 Interpretation:
+ICICIBANK is more volatile than the market (Beta > 1).
+TCS is less sensitive to market movements (Beta < 1).
+
+---
+
+### 4️⃣ Diversification & Efficient Frontier
+
+10,000 random portfolios were simulated.
+
+Maximum Sharpe Portfolio:
+
+- Return: 23.89%
+- Volatility: 23.85%
+
+Comparison:
+
+Highest Individual Return: 25.46% (INFY)  
+Highest Individual Risk: 31.74% (ICICIBANK)
+
+📌 Key Insight:
+Portfolio volatility (23.85%) is significantly lower than the riskiest individual stock (31.74%), proving diversification reduces risk.
+
+---
+
+### 5️⃣ Value at Risk (95% Confidence)
+
+Worst Expected Daily Loss (5% worst cases):
+
+- ICICIBANK: -2.53% (Highest downside risk)
+- INFY: -2.46%
+- HDFCBANK: -2.44%
+- RELIANCE: -2.41%
+- TCS: -2.15% (Lowest downside risk)
+
+📌 Interpretation:
+TCS shows the lowest potential extreme daily loss.
+ICICIBANK carries the highest tail risk.
+
+---
+
+## 🎯 Final Conclusion (From Data)
+
+- Risk and return are positively correlated.
+- INFY provides the best risk-adjusted return (Sharpe = 0.663).
+- ICICIBANK carries highest systematic and downside risk.
+- Diversification reduced portfolio risk from 31.74% to 23.85%.
+- Sharpe Ratio is a stronger decision metric than raw return.
+
+This analysis confirms the principles of Modern Portfolio Theory using real NSE stock data (2020–2025).
 
 ---
 
