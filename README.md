@@ -107,6 +107,32 @@ Actual returns were then compared against CAPM expected returns to determine whe
 
 ---
 
+## 📂 Python Implementation
+
+Below are the key code snippets used in this project.
+
+### 1️⃣ Import Libraries
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import yfinance as yf
+
+stocks = ['RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'INFY.NS', 'ICICIBANK.NS']
+data = yf.download(stocks, start="2019-01-01", end="2024-01-01")['Adj Close']
+
+daily_returns = data.pct_change().dropna()
+
+annual_returns = daily_returns.mean() * 252
+annual_volatility = daily_returns.std() * np.sqrt(252)
+
+risk_free_rate = 0.06
+sharpe_ratio = (annual_returns - risk_free_rate) / annual_volatility
+
+num_portfolios = 10000
+```
+
 ## Key Concepts Applied
 
 - Annual Return
