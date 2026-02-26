@@ -1,186 +1,134 @@
-Risk-Return-Analysis-Stocks
+#  Risk–Return Analysis of Indian Stocks (2020–2025)
 
-Risk and Return Analysis of Selected Indian Stocks using Modern Portfolio Theory (Python)
+This project applies Modern Portfolio Theory to analyze five NSE stocks using Python.
 
-Project Overview
+---
 
-This project analyzes the risk-return characteristics of selected Indian large-cap stocks using Modern Portfolio Theory (MPT). The objective is to evaluate individual stock performance, measure risk, apply CAPM, and construct an optimal portfolio using portfolio optimization techniques.
+##  Stocks Analyzed
 
-The analysis demonstrates practical implementation of financial theory using Python for real-world stock data.
+- HDFCBANK
+- ICICIBANK
+- INFY
+- RELIANCE
+- TCS
 
-Objective
+---
 
-The main objectives of this project are:
+# 1️ Risk vs Return
 
-To calculate annual returns of selected stocks
+<img width="913" height="547" alt="ebe7e87e-85ea-4341-bc6e-42b5d5334b67" src="https://github.com/user-attachments/assets/d0630c09-92a8-4941-9ac6-560da4905601" />
 
-To measure volatility (total risk)
 
-To compute Sharpe Ratio for risk-adjusted performance
+###  Numerical Evidence
 
-To calculate Beta (systematic risk)
+| Stock | Return | Volatility |
+|---|---:|---:|
+| INFY | **25.46%** | 27.86% |
+| ICICIBANK | 23.33% | **31.74%** |
+| TCS | 17.94% | **24.47%** |
+| RELIANCE | 16.30% | 29.73% |
+| HDFCBANK | 11.21% | 27.26% |
 
-To apply CAPM and estimate expected returns
+**Observation:**
+- INFY delivered highest return.
+- ICICIBANK carried highest risk.
+- TCS had lowest volatility.
 
-To construct the Efficient Frontier
+This confirms the positive risk–return relationship.
 
-To identify the Maximum Sharpe Ratio portfolio
+---
 
-Stocks Analyzed
+# 2️ Sharpe Ratio (Risk-Adjusted Performance)
 
-Reliance Industries
 
-TCS
+Risk-Free Rate Used: 7%
 
-HDFC Bank
+| Stock | Sharpe Ratio |
+|---|---:|
+| INFY | **0.6628** |
+| ICICIBANK | 0.5145 |
+| TCS | 0.4471 |
+| RELIANCE | 0.3127 |
+| HDFCBANK | 0.1547 |
 
-Infosys
+**Insight:**
+INFY provides the highest return per unit of risk.
+HDFCBANK shows weakest risk-adjusted performance.
 
-ICICI Bank
+---
 
-These large-cap stocks were selected from different sectors to observe diversification benefits.
+# 3️ Correlation Matrix
 
-Tools and Libraries Used
+<img width="731" height="547" alt="d2ed4ad4-acb8-403c-acc8-f3b921af5d19" src="https://github.com/user-attachments/assets/9bd9df53-71ab-4ecf-9fbb-834236976448" />
 
-Python
 
-Pandas
+###  What It Shows
 
-NumPy
+- Banking stocks (HDFCBANK & ICICIBANK) show higher correlation.
+- IT stocks (TCS & INFY) also move similarly.
+- Diversification benefit exists due to less-than-perfect correlation.
 
-Matplotlib
+---
 
-Seaborn
+# 4️ Efficient Frontier
 
-yFinance
+<img width="813" height="547" alt="797b7c81-f0ba-4b33-81da-54ef5b7b9078" src="https://github.com/user-attachments/assets/054e8e86-14db-4e6b-ae0a-363d9dc9a905" />
 
-Methodology
-1. Data Collection
 
-Historical stock price data was fetched using the yFinance library.
+10,000 portfolios simulated.
 
-Reason: Adjusted closing prices are required to calculate accurate daily returns including dividends and splits.
+###  Maximum Sharpe Portfolio
 
-2. Calculation of Daily Returns
+- Return: **23.89%**
+- Volatility: **23.85%**
 
-Daily returns were computed using percentage change of adjusted closing prices.
+Comparison:
+- Highest individual risk: 31.74% (ICICIBANK)
+- Portfolio risk reduced to 23.85%
 
-Reason: Returns are more meaningful than raw prices when comparing stock performance.
+Diversification reduced overall risk.
 
-3. Annual Return Calculation
+---
 
-Annual return was calculated by multiplying average daily return by 252 (average trading days in a year).
+# 5️ Beta (Market Sensitivity)
 
-Reason: Annualizing returns allows standardized comparison across stocks.
+| Stock | Beta |
+|---|---:|
+| ICICIBANK | **1.29** |
+| RELIANCE | 1.11 |
+| HDFCBANK | 1.08 |
+| INFY | 0.89 |
+| TCS | 0.75 |
 
-4. Volatility Calculation
+**Interpretation:**
+- ICICIBANK is highly sensitive to market movements.
+- TCS is more defensive (Beta < 1).
 
-Annual volatility was calculated as:
+---
 
-Standard Deviation of Daily Returns × √252
+# 6️ Value at Risk (95%)
 
-Reason: Volatility represents total risk and price fluctuations of the stock.
+| Stock | Daily VaR |
+|---|---:|
+| ICICIBANK | **-2.53%** |
+| INFY | -2.46% |
+| HDFCBANK | -2.44% |
+| RELIANCE | -2.41% |
+| TCS | **-2.15%** |
 
-5. Risk vs Return Analysis
+TCS has the lowest extreme downside risk.
+ICICIBANK carries highest tail risk.
 
-A scatter plot was created to compare annual returns and annual volatility of each stock.
+---
 
-<img width="913" height="547" alt="810f3383-1091-4651-9425-721aa61a8d15" src="https://github.com/user-attachments/assets/b34826e2-043f-4e9d-8d5d-0a3ffa7becc5" />
+#  Final Conclusion
 
-Reason: This helps visualize the relationship between risk and return.
+- Higher returns generally came with higher volatility.
+- INFY delivered best risk-adjusted performance (Sharpe = 0.6628).
+- Portfolio optimization reduced risk from 31.74% to 23.85%.
+- Diversification improved efficiency.
+- Sharpe Ratio is more informative than raw return alone.
 
-6. Sharpe Ratio
+---
 
-Sharpe Ratio was calculated using:
-
-(Portfolio Return − Risk-Free Rate) / Portfolio Volatility
-
-Reason: It measures risk-adjusted return. Higher Sharpe Ratio indicates better performance per unit of risk.
-
-7. Portfolio Simulation and Efficient Frontier
-
-Thousands of random portfolios were generated by assigning random weights to stocks.
-
-For each portfolio:
-
-Expected return was calculated
-
-Volatility was calculated
-
-Sharpe Ratio was computed
-
-The Efficient Frontier was plotted.
-
-<img width="813" height="547" alt="4a38c92f-7381-4f01-841a-231884340f91" src="https://github.com/user-attachments/assets/3cfb55a5-b954-48cc-be8f-ffe1aed47803" />
-
-Reason: The Efficient Frontier identifies optimal portfolios that offer maximum return for a given level of risk.
-
-8. Maximum Sharpe Ratio Portfolio
-
-The portfolio with the highest Sharpe Ratio was identified.
-
-
-Reason: This portfolio provides the best risk-adjusted performance.
-
-9. Beta Calculation
-
-Beta was calculated relative to the market index.
-
-Reason: Beta measures systematic risk and sensitivity to market movements.
-
-10. CAPM Analysis
-
-CAPM formula used:
-
-Expected Return = Risk-Free Rate + Beta × (Market Return − Risk-Free Rate)
-
-Actual returns were compared with CAPM expected returns.
-
-Reason: To determine whether stocks are overperforming or underperforming relative to market expectations.
-
-Key Concepts Applied
-
-Annual Return
-
-Volatility
-
-Sharpe Ratio
-
-Beta
-
-CAPM
-
-Efficient Frontier
-
-Portfolio Optimization
-
-Diversification
-
-Results and Insights
-
-Higher return stocks generally exhibited higher volatility.
-
-Diversification reduced overall portfolio risk.
-
-The Maximum Sharpe Ratio portfolio provided the best risk-adjusted performance.
-
-Some stocks outperformed their CAPM expected return.
-
-Portfolio optimization significantly improved return per unit of risk.
-
-
-Conclusion
-
-This project successfully applies Modern Portfolio Theory to analyze and optimize a portfolio of Indian large-cap stocks.
-
-The analysis confirms that:
-
-Risk and return are positively related.
-
-Diversification reduces unsystematic risk.
-
-Portfolio optimization improves risk-adjusted performance.
-
-CAPM provides a useful benchmark for expected returns.
-
-Overall, this project demonstrates practical skills in financial analysis, portfolio optimization, risk management, and data analysis using Python.
+Full implementation available in `Project.ipynb`.
